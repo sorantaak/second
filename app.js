@@ -1,25 +1,22 @@
-let userInfo = {
-	userId: 98,
-	username: "SoranTaak",
-	role: "admin",
-};
-console.log(`User role is ${userInfo.role}`);
-
-// another test
-let userInfoOne = {
-	userId: 32,
-	username: "SaharMohammadAmini",
-	role: "author",
-};
-let userInfoTwo = {
-	userId: 74,
-	username: "AsrinTaak",
-	role: "user",
+let userAccoutn = {
+	fullName: "Soran Taak",
+	outgo: 0,
+	income: 0,
 };
 
-let fetchUserData = function (user) {
-	console.log(`User nam is: ${user.username}`);
+const addOutgo = function (account, amount) {
+	account.outgo = account.outgo + amount;
+};
+const addIncome = function (account, amount) {
+	account.income = account.income + amount;
+};
+const getAccountData = function (account) {
+	let balance = account.income - account.outgo;
+	return `Account name is : ${account.fullName} - balance is: ${balance}
+    `;
 };
 
-fetchUserData(userInfoOne);
-fetchUserData(userInfoTwo);
+addIncome(userAccoutn, 1000);
+addOutgo(userAccoutn, 150);
+addOutgo(userAccoutn, 250);
+console.log(getAccountData(userAccoutn));
