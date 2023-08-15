@@ -1,23 +1,19 @@
-let firstName = "soran";
-if (true) {
-	let lastName = "taak";
-	console.log(lastName);
-	if (true) {
-		let age = 30;
-		console.log(age);
-	}
-}
+let message = function () {
+	console.log("Welcomme!!");
+};
+message();
+message();
+message();
 
-console.log(firstName);
+let userId = function (id) {
+	console.log(id);
+};
 
-///////// second check blocking
-let name1 = "Test1";
-
-if (true) {
-	let name1 = "Test2";
-	
-	if (true) {
-		let name1 = "Test3";
-		console.log(name1);
-	}
-}
+userId(20);
+let userId2 = function (id) {
+	let res = `User id is ${id}`;
+	return res;
+};
+let showResult = userId2(765);
+console.log(showResult);
+console.log(userId2(5656));
