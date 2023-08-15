@@ -1,19 +1,13 @@
-let message = function () {
-	console.log("Welcomme!!");
-};
-message();
-message();
-message();
-
-let userId = function (id) {
-	console.log(id);
-};
-
-userId(20);
-let userId2 = function (id) {
-	let res = `User id is ${id}`;
+let sum = function (num1, num2, num3) {
+	let res = num1 + num2 + num3;
 	return res;
 };
-let showResult = userId2(765);
+
+let showResult = sum(10, 20, 69.65);
 console.log(showResult);
-console.log(userId2(5656));
+
+let getUserInfo = function (name = "Test", id = 2) {
+	return `name: ${name} Id:${id}`;
+};
+console.log(getUserInfo("Soran", 50));
+console.log(getUserInfo());
