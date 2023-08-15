@@ -1,22 +1,10 @@
-let userAccoutn = {
-	fullName: "Soran Taak",
-	outgo: 0,
-	income: 0,
+let courses = {
+	courseName: "Advanced Js",
+	studentLimit: 30,
+	studentCount: 0,
+	checkAvailability: function (courseSize) {
+		let leftCount = this.studentLimit - this.studentCount;
+		return courseSize <= leftCount;
+	},
 };
-
-const addOutgo = function (account, amount) {
-	account.outgo = account.outgo + amount;
-};
-const addIncome = function (account, amount) {
-	account.income = account.income + amount;
-};
-const getAccountData = function (account) {
-	let balance = account.income - account.outgo;
-	return `Account name is : ${account.fullName} - balance is: ${balance}
-    `;
-};
-
-addIncome(userAccoutn, 1000);
-addOutgo(userAccoutn, 150);
-addOutgo(userAccoutn, 250);
-console.log(getAccountData(userAccoutn));
+console.log(courses.checkAvailability(50));
