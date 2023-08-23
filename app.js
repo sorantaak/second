@@ -1,9 +1,7 @@
-const cartItems = ["Book1", "Book2", "Book3", "Book4"];
+const cartItems = ['Book1', 'Book2', 'Book3', 'Book4'];
 
-cartItems.shift();
-cartItems.splice(1, 1);
-cartItems.push("New Book");
-console.log(cartItems);
-cartItems.forEach(function (item, index) {
-	console.log(`index[${index + 1}]-Product name :${item}`);
-});
+for (let index = 0; index < cartItems.length; index++) {
+	console.log(`${index + 1} - ${cartItems[index]}`);
+}
+
+
